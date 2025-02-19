@@ -1,38 +1,36 @@
-const ChatTitle="چت بات امیر وزیری"; 
-const FooterAreaTitle="متعلق به امیر وزیری";
-const PagebarTitle="چباو";
+import { 
+  ChatTitle, 
+  FooterAreaTitle, 
+  PagebarTitle, 
+  AIChatBotName, 
+  UserName, 
+  Avatar_User_Path, 
+  Avatar_AI_Path, 
+  Button_Send_BackgroundColor, 
+  Button_Send_Color, 
+  Button_Send_Text, 
+  Models, 
+  faviconUrl, 
+  ConnectionFailed, 
+  Footer_Section_TextColor, 
+  Footer_Section_BackgroundColor, 
+  modelName, 
+  baseUrl, 
+  apiUrl, 
+  apiKey,
+  messages 
+} from './Constant.js';
 
-const AIChatBotName="هویج";
-const UserName="امیر";
-
-const Avatar_User_Path='./Img/User-Avatar.png';
-const Avatar_AI_Path='./Img/Ai-Avatar.avif';
-
-const Button_Send_BackgroundColor='#000';
-const Button_Send_Color='#fff';
-const Button_Send_Text='ارسال';
-
-
-const Models = "gpt-3.5-turbo | gpt-4o-mini | gpt-4o | gpt-4-trubo | dall-e-2 | dall-e-3";
-
-const faviconUrl = "./Img/favicon.ico"; 
-
-const ConnectionFailed='Opps!!! :)';
-
-
-const modelName = "gpt-4o-mini"; 
-const baseUrl = "https://api.avalai.ir/v1";
-const apiUrl = "https://api.avalai.ir/v1/images/generations";
-const apiKey = "YOUR_API_KEY";
-
-let messages = [
-    { role: "system", content: "You are a helpful assistant." }
-];
 
 window.onload = function () {
     document.getElementById("ChatBarTitle").textContent = ChatTitle;
     document.getElementById("FooterArea").textContent = FooterAreaTitle;
     document.getElementById('PagebarTitle').textContent=PagebarTitle;
+
+    const _footerSection=document.getElementById('footerSection');
+    _footerSection.style.background=Footer_Section_BackgroundColor;
+    _footerSection.style.color=Footer_Section_TextColor;
+
 
     const button = document.getElementById("send-btn");
     button.style.backgroundColor = Button_Send_BackgroundColor;
