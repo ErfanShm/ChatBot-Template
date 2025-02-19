@@ -21,7 +21,6 @@ export const ConnectionFailed = 'Opps!!! :)';
 export const Footer_Section_TextColor = '#000';
 export const Footer_Section_BackgroundColor = '#FFF';
 
-export const modelName = "gpt-4o-mini"; 
 export const baseUrl = "https://api.avalai.ir/v1";
 export const apiUrl = "https://api.avalai.ir/v1/images/generations";
 export const apiKey = "aa-crDGvdxPbJsFNth9WgEWdfAKSVFc6mX38bJZJkdzVSunsZ2A";

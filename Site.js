@@ -14,7 +14,6 @@ import {
   ConnectionFailed, 
   Footer_Section_TextColor, 
   Footer_Section_BackgroundColor, 
-  modelName, 
   baseUrl, 
   apiUrl, 
   apiKey,
