@@ -18,7 +18,8 @@ import {
   baseUrl, 
   apiUrl, 
   apiKey,
-  messages 
+  messages,
+  Question_Form 
 } from './constant.js';
 
 function checkIncompleteConfig() {
@@ -38,6 +39,8 @@ if (checkIncompleteConfig()) {
 
 // This code can follow after the import statement
 window.onload = function () {
+  const savedName = localStorage.getItem("userInitialPrompt");
+
     // Check if constant.js exists using fetch
     fetch('./constant.js')
         .then(response => {
@@ -55,8 +58,15 @@ window.onload = function () {
                 button.style.backgroundColor = Button_Send_BackgroundColor;
                 button.style.color = Button_Send_Color;
                 button.innerText = Button_Send_Text;
+
+
+if (!savedName) {
+  window.location.href = `/forms/${Question_Form}`;
+
+} else {
+  SendInitialMessage(savedName,'gpt-4o')
+}
             } else {
-                // Redirect to Con.html if constant.js doesn't exist
                 window.location.href = './Con.html';
             }
         })
@@ -108,6 +118,77 @@ async function SendMessage() {
   var userMessage = document.getElementById("user-input").value;
   const selectElement = document.getElementById("model-select");
   const selectedModel = selectElement.value;
+
+  if (userMessage.trim() !== "") {
+      var userMessageElement = document.createElement("li");
+      userMessageElement.classList.add(
+          "p-2",
+          "border-bottom",
+          "bg-body-tertiary",
+          "d-flex",
+          "justify-content-end"
+      );
+
+      userMessageElement.innerHTML = `
+      <div class="d-flex flex-row-reverse">
+          <img
+              src="${Avatar_User_Path}"
+              alt="user-avatar"
+              class="rounded-circle d-flex align-self-center me-3 shadow-1-strong"
+              width="60"
+          />
+          <div class="pt-1">
+              <p class="fw-bold mb-0">${UserName}</p>
+              <p class="small text-muted">${userMessage}</p>
+          </div>
+      </div>
+      `;
+
+      document.getElementById("chat-list").appendChild(userMessageElement);
+
+      document.getElementById("user-input").value = "";
+
+if(selectedModel=='dall-e-3' || selectedModel=='dall-e-2')
+{
+  generateImage(userMessage,selectedModel);
+}
+else
+{  
+  const response = await Result(userMessage,selectedModel);
+
+      if (response) {
+          var assistantMessageElement = document.createElement("li");
+          assistantMessageElement.classList.add(
+              "p-2",
+              "border-bottom",
+              "bg-body-tertiary",
+              "d-flex",
+              "justify-content-start"
+          );
+
+          assistantMessageElement.innerHTML = `
+          <div class="d-flex flex-row">
+              <img
+                  src="${Avatar_AI_Path}"
+                  alt="assistant-avatar"
+                  class="rounded-circle d-flex align-self-center me-3 shadow-1-strong"
+                  width="60"
+              />
+              <div class="pt-1">
+                  <p class="fw-bold mb-0">${AIChatBotName}</p>
+                  <p class="small text-muted">${response}</p>
+              </div>
+          </div>
+          `;
+
+          document.getElementById("chat-list").appendChild(assistantMessageElement);
+      }}
+    
+  }
+}
+
+async function SendInitialMessage(userMessage,selectedModel) {
+
 
   if (userMessage.trim() !== "") {
       var userMessageElement = document.createElement("li");
