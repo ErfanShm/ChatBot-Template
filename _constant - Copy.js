@@ -25,6 +25,7 @@
       export const baseUrl = "https://api.avalai.ir/v1";
       export const apiUrl = "https://api.avalai.ir/v1/images/generations";
       export const apiKey = "1";
+      export const Question_Form="YOUR_DATA"
 
       export const messages = [
             { role: "system", content: "You are a helpful assistant." }

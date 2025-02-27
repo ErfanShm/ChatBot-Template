@@ -4,8 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>فرم طراحی لباس</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <link rel="stylesheet" href="StyleSheet.css" />
   </head>
   <body>
@@ -51,7 +58,13 @@
           <div class="col-md-4">
             <div class="form-group mb-3">
               <label>داداش یا آبجیمون چه قومیتی داره ؟</label>
-              <input type="text" class="form-control" id="ethnicity" placeholder="مثال: فارس، عرب، لر، ..." required />
+              <input
+                type="text"
+                class="form-control"
+                id="ethnicity"
+                placeholder="مثال: فارس، عرب، لر، ..."
+                required
+              />
             </div>
           </div>
         </div>
@@ -69,7 +82,13 @@
         <h4 class="section-title mt-4">علاقه و ذائقه ها</h4>
         <div class="form-group mb-3">
           <label>برات چه مکانی بیشتر جذابیت داره ؟</label>
-          <input type="text" class="form-control" id="favoritePlace" placeholder="مثال: کوه، دریا، جنگل، ..." required />
+          <input
+            type="text"
+            class="form-control"
+            id="favoritePlace"
+            placeholder="مثال: کوه، دریا، جنگل، ..."
+            required
+          />
         </div>
         <div class="form-group mb-3">
           <label>از چه رنگی برات داخل طرح استفاده کنم ؟</label>
@@ -81,7 +100,13 @@
         </div>
         <div class="form-group mb-3">
           <label>چه نمادی رو خیلی دوست داری ؟</label>
-          <input type="text" class="form-control" id="favoriteSymbol" placeholder="مثال: قلب، کره، ستاره، ..." required />
+          <input
+            type="text"
+            class="form-control"
+            id="favoriteSymbol"
+            placeholder="مثال: قلب، کره، ستاره، ..."
+            required
+          />
         </div>
 
         <!-- Design Style Section -->
@@ -112,7 +137,7 @@
           </div>
           <div class="col-md-6">
             <div class="form-group mb-3">
-              <label>به نظرت آب و هوایی که  شهرتون داره چجوریه ؟</label>
+              <label>به نظرت آب و هوایی که شهرتون داره چجوریه ؟</label>
               <select class="form-control" id="climate" required>
                 <option value="گرم و خشک">گرم و خشک</option>
                 <option value="سرد و کوهستانی">سرد و کوهستانی</option>
@@ -127,11 +152,23 @@
         <h4 class="section-title mt-4">مفهوم و شخصیت</h4>
         <div class="form-group mb-3">
           <label>مفهوم مورد نظرت که دوست داری تو طرحت دیدار بشه چیه ؟</label>
-          <input type="text" class="form-control" id="concept" placeholder="مثال: آزادی، امید، ..." required />
+          <input
+            type="text"
+            class="form-control"
+            id="concept"
+            placeholder="مثال: آزادی، امید، ..."
+            required
+          />
         </div>
         <div class="form-group mb-3">
           <label>شخصیتی رو که دوست داری برام بگو ؟</label>
-          <input type="text" class="form-control" id="favoriteCharacter" placeholder="مثال: ویکتور هوگو، رونالدو، ..." required />
+          <input
+            type="text"
+            class="form-control"
+            id="favoriteCharacter"
+            placeholder="مثال: ویکتور هوگو، رونالدو، ..."
+            required
+          />
         </div>
 
         <!-- Design Placement Section -->
@@ -154,41 +191,46 @@
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-    
+
     <!-- Custom JS -->
     <script>
-      document.getElementById('responsiveForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        // Collect form data
-        const formData = {
-          fullName: document.getElementById('fullName').value,
-          gender: document.getElementById('gender').value,
-          age: document.getElementById('age').value,
-          occupation: document.getElementById('occupation').value,
-          ethnicity: document.getElementById('ethnicity').value,
-          temperament: document.getElementById('temperament').value,
-          favoritePlace: document.getElementById('favoritePlace').value,
-          favoriteColor: document.getElementById('favoriteColor').value,
-          favoriteSport: document.getElementById('favoriteSport').value,
-          favoriteSymbol: document.getElementById('favoriteSymbol').value,
-          designStyle: document.getElementById('designStyle').value,
-          region: document.getElementById('region').value,
-          climate: document.getElementById('climate').value,
-          concept: document.getElementById('concept').value,
-          favoriteCharacter: document.getElementById('favoriteCharacter').value,
-          designPlacement: document.getElementById('designPlacement').value
-        };
+      document
+        .getElementById("responsiveForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
 
-        // Create prompt template
-        let templateString = `سلام تو یک طراح طرح های روی لباس هستی که 15 سال سابقه کار در این حوزه داری و تعداد زیادی جایزه در این حوزه کاری خودت کسب کرده ای به عنوان بهترین طراح لباس ، حالا من از تو میخوام برای یک فردی با اسم ${formData.fullName} جنسیت ${formData.gender} که ${formData.age} سالشه و شغل این فرد ${formData.occupation} همچنین قومیت این فرد ${formData.ethnicity} ، مزاج طب سنتی ${formData.temperament} ، به مکان های ${formData.favoritePlace} علاقه دارد ، رنگ مورد علاقه این فرد ${formData.favoriteColor} و به ورزش ${formData.favoriteSport} علاقه دارد ،از بین نماد ها نماد ${formData.favoriteSymbol} را بیشتر دوست دارد و سبکی که دوست دارد طراحی برایش انجام شود سبک ${formData.designStyle} است و در قسمت ${formData.region} کشور ایران زندگی میکند که آب و هوایی ${formData.climate} دارد و از بین مفاهیم ${formData.concept} رو دوست داره و شخصیت ${formData.favoriteCharacter} برای این فرد الگو محسوب می شود و دوست دارد این طرح بر روی قسمت ${formData.designPlacement} لباسش طراحی شه یک طرحی را تولید کن که آن طرح لباس در عین جذابیت بر روی سلامت فرد هم تاثیر لازم را داشته باشه طرحی که بهم میدی در طراحی شلوغ نباشه ،این طرح قراره روی لباس فرد حک میشه ، از طرح هایی که داخل عکس معنایی ندارد خود داری کن و در رنگ های عکس از رنگ هایی با یک هارمونی خاص پیروی کن.`;
+          // Collect form data
+          const formData = {
+            fullName: document.getElementById("fullName").value,
+            gender: document.getElementById("gender").value,
+            age: document.getElementById("age").value,
+            occupation: document.getElementById("occupation").value,
+            ethnicity: document.getElementById("ethnicity").value,
+            temperament: document.getElementById("temperament").value,
+            favoritePlace: document.getElementById("favoritePlace").value,
+            favoriteColor: document.getElementById("favoriteColor").value,
+            favoriteSport: document.getElementById("favoriteSport").value,
+            favoriteSymbol: document.getElementById("favoriteSymbol").value,
+            designStyle: document.getElementById("designStyle").value,
+            region: document.getElementById("region").value,
+            climate: document.getElementById("climate").value,
+            concept: document.getElementById("concept").value,
+            favoriteCharacter:
+              document.getElementById("favoriteCharacter").value,
+            designPlacement: document.getElementById("designPlacement").value,
+          };
 
-        // Log the template string (in a real application, you would send this to your API)
-        console.log(templateString);
-        
-        // Show success message
-        alert('اطلاعات با موفقیت ثبت شد.');
-      });
+          // Create prompt template
+          let templateString = `سلام تو یک طراح طرح های روی لباس هستی که 15 سال سابقه کار در این حوزه داری و تعداد زیادی جایزه در این حوزه کاری خودت کسب کرده ای به عنوان بهترین طراح لباس ، حالا من از تو میخوام برای یک فردی با اسم ${formData.fullName} جنسیت ${formData.gender} که ${formData.age} سالشه و شغل این فرد ${formData.occupation} همچنین قومیت این فرد ${formData.ethnicity} ، مزاج طب سنتی ${formData.temperament} ، به مکان های ${formData.favoritePlace} علاقه دارد ، رنگ مورد علاقه این فرد ${formData.favoriteColor} و به ورزش ${formData.favoriteSport} علاقه دارد ،از بین نماد ها نماد ${formData.favoriteSymbol} را بیشتر دوست دارد و سبکی که دوست دارد طراحی برایش انجام شود سبک ${formData.designStyle} است و در قسمت ${formData.region} کشور ایران زندگی میکند که آب و هوایی ${formData.climate} دارد و از بین مفاهیم ${formData.concept} رو دوست داره و شخصیت ${formData.favoriteCharacter} برای این فرد الگو محسوب می شود و دوست دارد این طرح بر روی قسمت ${formData.designPlacement} لباسش طراحی شه یک طرحی را تولید کن که آن طرح لباس در عین جذابیت بر روی سلامت فرد هم تاثیر لازم را داشته باشه طرحی که بهم میدی در طراحی شلوغ نباشه ،این طرح قراره روی لباس فرد حک میشه ، از طرح هایی که داخل عکس معنایی ندارد خود داری کن و در رنگ های عکس از رنگ هایی با یک هارمونی خاص پیروی کن.`;
+
+          // Log the template string (in a real application, you would send this to your API)
+          console.log(templateString);
+
+          // Show success message
+          localStorage.setItem("userInitialPrompt", templateString); // Save the name to localStorage
+
+          window.location.href = `../index.html`;
+        });
     </script>
   </body>
 </html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>فرم ورود اطلاعات اولیه</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="StyleSheet.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>فرم ورود اطلاعات اولیه</h2>
+      <form id="responsiveForm">
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="Name">نام کاربر</label>
+              <input type="text" class="form-control" id="Name" />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="exportexprince"
+                >آیا تجربه صادرات داشته‌اید؟ اگر بله، چه محصولی و به کدام
+                کشور؟</label
+              >
+              <input type="text" class="form-control" id="exportexprince" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="categorynameproduct">نام محصول و دسته‌بندی آن:</label>
+              <input class="form-control" id="categorynameproduct" />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="bussinesFeature"
+                >مشخصات کلیدی محصول: (جنس، وزن، ابعاد، ویژگی‌های متمایز
+                و...)</label
+              >
+              <input class="form-control" id="bussinesFeature" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="packageType"> نوع بسته‌بندی مادر و محصول :</label>
+              <input class="form-control" id="packageType" />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="priceproduct"> قیمت تمام‌شده محصول:</label>
+              <input class="form-control" name="priceproduct" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="minexport">حداقل مقدار صادرات در هر سفارش:</label>
+              <input class="form-control" id="minexport" />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="targetcustomer">نوع مشتری هدف:</label>
+              <select class="form-control" id="targetcustomer">
+                <option value="B2B (عمده‌فروشی)">B2B (عمده‌فروشی)</option>
+                <option value="B2C(خرده‌فروشی)">B2C(خرده‌فروشی)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="seasonproduct"
+                >آیا محصول شما فصلی است؟ (مثلاً پوشاک زمستانی، محصولات کشاورزی
+                و...)</label
+              >
+              <input class="form-control" id="seasonproduct" />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="targetCountry"
+                >کشورهای موردنظر برای صادرات: (می‌توانید خودتان انتخاب کنید یا
+                از پیشنهادهای ما یعنی آلمان، امارات، چین و روسیه استفاده کنید.)
+              </label>
+              <input class="form-control" id="targetCountry" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label for="historycompany">حوزه فعالیت شرکت: </label>
+            <input class="form-control" id="historycompany" />
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">ارسال سوالات</button>
+      </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+      document
+        .getElementById("responsiveForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const name = document.getElementById("Name").value; // نام کاربر
+          const exportExperience =
+            document.getElementById("exportexprince").value; // آیا تجربه صادرات داشته‌اید؟
+          const categoryNameProduct = document.getElementById(
+            "categorynameproduct"
+          ).value; // نام محصول و دسته‌بندی آن
+          const businessFeature =
+            document.getElementById("bussinesFeature").value; // مشخصات کلیدی محصول
+          const packageType = document.getElementById("packageType").value; // نوع بسته‌بندی
+          const priceProduct = document.querySelector(
+            '[name="priceproduct"]'
+          ).value; // قیمت تمام‌شده محصول
+          const minExport = document.getElementById("minexport").value; // حداقل مقدار صادرات
+          const targetCustomer =
+            document.getElementById("targetcustomer").value; // نوع مشتری هدف
+          const seasonProduct = document.getElementById("seasonproduct").value; // آیا محصول فصلی است؟
+          const targetCountry = document.getElementById("targetCountry").value; // کشورهای موردنظر برای صادرات
+          const historycompany =
+            document.getElementById("historycompany").value;
+          // Template string with placeholders
+          let templateString = `من تولیدکننده‌/تاجری هستم که به‌تازگی قصد دارم صادرات را شروع کنم و می‌خواهم بدانم محصولم برای کدام کشور بیشترین مزیت صادراتی را دارد. مشخصات محصول من به این صورت است:
+نام کاربر: ${name}
+حوزه فعالیت شرکت: ${seasonProduct}
+سابقه: ${historycompany}
+نام محصول: ${categoryNameProduct}
+مشخصات: ${businessFeature}
+نوع بسته بندی محصول: ${packageType}
+قیمت تمام‌شده (EXW) برای هر واحد در ایران: ${priceProduct}
+حداقل مقدار صادرات در هرسفارش (MOQ): ${minExport}
+نوع مشتری هدف: ${targetCustomer}
+ملاحظات فروش: ${seasonProduct}
+با توجه به قیمت خرده‌فروشی محصولم در کشورهای [${targetCountry}]، آیا محصول من ظرفیت صادرات دارد؟ اگر بله، سودآورترین کشور برای صادرات کدام است؟
+همچنین، هزینه‌های جانبی تجارت مثل حمل‌ونقل و انتقال پول را در نظر بگیر و تخمینی از سود هر واحد محصول در کشورهای پیشنهادی ارائه بده.
+اگر سوال دیگری وجود دارد که در تحلیل بهت کمک می‌کند، از من بپرس تا اطلاعات تکمیلی را ارائه دهم.`;
+
+          localStorage.setItem("userInitialPrompt", templateString); // Save the name to localStorage
+
+          window.location.href = `../index.html`;
+        });
+    </script>
+  </body>
+</html>

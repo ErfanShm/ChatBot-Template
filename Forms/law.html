@@ -4,8 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>فرم اطلاعات قرارداد</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <link rel="stylesheet" href="StyleSheet.css" />
   </head>
   <body>
@@ -14,60 +21,105 @@
       <form id="responsiveForm">
         <!-- Section 1: Contract Parties -->
         <h4 class="section-title">۱. اطلاعات طرفین قرارداد</h4>
-        
+
         <!-- First Party -->
         <div class="row">
           <div class="col-md-6">
             <div class="form-group mb-3">
               <label>نام طرف اول</label>
-              <input type="text" class="form-control" id="firstPartyName" required />
+              <input
+                type="text"
+                class="form-control"
+                id="firstPartyName"
+                required
+              />
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group mb-3">
               <label>کد ملی/شناسه ملی طرف اول</label>
-              <input type="text" class="form-control" id="firstPartyId" required />
+              <input
+                type="text"
+                class="form-control"
+                id="firstPartyId"
+                required
+              />
             </div>
           </div>
         </div>
         <div class="form-group mb-3">
           <label>آدرس طرف اول</label>
-          <textarea class="form-control" id="firstPartyAddress" rows="2" required></textarea>
+          <textarea
+            class="form-control"
+            id="firstPartyAddress"
+            rows="2"
+            required
+          ></textarea>
         </div>
-        
+
         <!-- Second Party -->
         <div class="row">
           <div class="col-md-6">
             <div class="form-group mb-3">
               <label>نام طرف دوم</label>
-              <input type="text" class="form-control" id="secondPartyName" required />
+              <input
+                type="text"
+                class="form-control"
+                id="secondPartyName"
+                required
+              />
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group mb-3">
               <label>کد ملی/شناسه ملی طرف دوم</label>
-              <input type="text" class="form-control" id="secondPartyId" required />
+              <input
+                type="text"
+                class="form-control"
+                id="secondPartyId"
+                required
+              />
             </div>
           </div>
         </div>
         <div class="form-group mb-3">
           <label>آدرس طرف دوم</label>
-          <textarea class="form-control" id="secondPartyAddress" rows="2" required></textarea>
+          <textarea
+            class="form-control"
+            id="secondPartyAddress"
+            rows="2"
+            required
+          ></textarea>
         </div>
 
         <!-- Section 2: Contract Subject -->
         <h4 class="section-title mt-4">۲. موضوع قرارداد</h4>
         <div class="form-group mb-3">
           <label>شرح دقیق کالاها یا خدمات</label>
-          <textarea class="form-control" id="contractDescription" rows="3" required></textarea>
+          <textarea
+            class="form-control"
+            id="contractDescription"
+            rows="3"
+            required
+          ></textarea>
         </div>
         <div class="form-group mb-3">
           <label>مشخصات فنی و کیفی</label>
-          <textarea class="form-control" id="technicalSpecs" rows="2" required></textarea>
+          <textarea
+            class="form-control"
+            id="technicalSpecs"
+            rows="2"
+            required
+          ></textarea>
         </div>
         <div class="form-group mb-3">
           <label>حدود و محدوده خدمات</label>
-          <textarea class="form-control" id="serviceScope" rows="2" required></textarea>
+          <textarea
+            class="form-control"
+            id="serviceScope"
+            rows="2"
+            required
+          ></textarea>
         </div>
 
         <!-- Section 3: Payment Terms -->
@@ -76,7 +128,12 @@
           <div class="col-md-6">
             <div class="form-group mb-3">
               <label>مبلغ کل قرارداد</label>
-              <input type="number" class="form-control" id="totalAmount" required />
+              <input
+                type="number"
+                class="form-control"
+                id="totalAmount"
+                required
+              />
             </div>
           </div>
           <div class="col-md-6">
@@ -118,33 +175,60 @@
         </div>
         <div class="form-group mb-3">
           <label>شرایط تمدید</label>
-          <textarea class="form-control" id="extensionTerms" rows="2"></textarea>
+          <textarea
+            class="form-control"
+            id="extensionTerms"
+            rows="2"
+          ></textarea>
         </div>
 
         <!-- Section 5: Obligations -->
         <h4 class="section-title mt-4">۵. تعهدات طرفین</h4>
         <div class="form-group mb-3">
           <label>تعهدات طرف اول</label>
-          <textarea class="form-control" id="firstPartyObligations" rows="3" required></textarea>
+          <textarea
+            class="form-control"
+            id="firstPartyObligations"
+            rows="3"
+            required
+          ></textarea>
         </div>
         <div class="form-group mb-3">
           <label>تعهدات طرف دوم</label>
-          <textarea class="form-control" id="secondPartyObligations" rows="3" required></textarea>
+          <textarea
+            class="form-control"
+            id="secondPartyObligations"
+            rows="3"
+            required
+          ></textarea>
         </div>
         <div class="form-group mb-3">
           <label>استانداردهای کیفیت و ایمنی</label>
-          <textarea class="form-control" id="qualityStandards" rows="2"></textarea>
+          <textarea
+            class="form-control"
+            id="qualityStandards"
+            rows="2"
+          ></textarea>
         </div>
 
         <!-- Section 6: Termination -->
         <h4 class="section-title mt-4">۶. شرایط فسخ قرارداد</h4>
         <div class="form-group mb-3">
           <label>موارد مجاز فسخ</label>
-          <textarea class="form-control" id="terminationConditions" rows="2" required></textarea>
+          <textarea
+            class="form-control"
+            id="terminationConditions"
+            rows="2"
+            required
+          ></textarea>
         </div>
         <div class="form-group mb-3">
           <label>جریمه‌های فسخ پیش از موعد</label>
-          <textarea class="form-control" id="earlyTerminationPenalties" rows="2"></textarea>
+          <textarea
+            class="form-control"
+            id="earlyTerminationPenalties"
+            rows="2"
+          ></textarea>
         </div>
 
         <!-- Section 7: Performance Guarantee -->
@@ -178,80 +262,109 @@
         <h4 class="section-title mt-4">۹. فورس ماژور</h4>
         <div class="form-group mb-3">
           <label>شرایط فورس ماژور</label>
-          <textarea class="form-control" id="forceMajeureConditions" rows="2"></textarea>
+          <textarea
+            class="form-control"
+            id="forceMajeureConditions"
+            rows="2"
+          ></textarea>
         </div>
 
         <!-- Section 10: Confidentiality -->
         <h4 class="section-title mt-4">۱۰. محرمانگی اطلاعات</h4>
         <div class="form-group mb-3">
           <label>تعهدات محرمانگی</label>
-          <textarea class="form-control" id="confidentialityTerms" rows="2"></textarea>
+          <textarea
+            class="form-control"
+            id="confidentialityTerms"
+            rows="2"
+          ></textarea>
         </div>
 
         <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary mt-4">ثبت اطلاعات قرارداد</button>
+        <button type="submit" class="btn btn-primary mt-4">
+          ثبت اطلاعات قرارداد
+        </button>
       </form>
     </div>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-    
+
     <!-- Custom JS -->
     <script>
-      document.getElementById('responsiveForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        // Collect form data
-        const formData = {
-          firstParty: {
-            name: document.getElementById('firstPartyName').value,
-            id: document.getElementById('firstPartyId').value,
-            address: document.getElementById('firstPartyAddress').value,
-            representative: document.getElementById('firstPartyRepresentative').value
-          },
-          secondParty: {
-            name: document.getElementById('secondPartyName').value,
-            id: document.getElementById('secondPartyId').value,
-            address: document.getElementById('secondPartyAddress').value,
-            representative: document.getElementById('secondPartyRepresentative').value
-          },
-          company: {
-            nationality: document.getElementById('nationality').value,
-            registrationCountry: document.getElementById('registrationCountry').value
-          },
-          contract: {
-            description: document.getElementById('contractDescription').value,
-            technicalSpecs: document.getElementById('technicalSpecs').value,
-            serviceScope: document.getElementById('serviceScope').value,
-            amount: document.getElementById('totalAmount').value,
-            currency: document.getElementById('currency').value,
-            paymentMethod: document.getElementById('paymentMethod').value,
-            startDate: document.getElementById('startDate').value,
-            endDate: document.getElementById('endDate').value,
-            extensionTerms: document.getElementById('extensionTerms').value,
-            firstPartyObligations: document.getElementById('firstPartyObligations').value,
-            secondPartyObligations: document.getElementById('secondPartyObligations').value,
-            qualityStandards: document.getElementById('qualityStandards').value,
-            terminationConditions: document.getElementById('terminationConditions').value,
-            earlyTerminationPenalties: document.getElementById('earlyTerminationPenalties').value,
-            guaranteeType: document.getElementById('guaranteeType').value,
-            guaranteeAmount: document.getElementById('guaranteeAmount').value,
-            disputeResolution: document.getElementById('disputeResolutionMethod').value,
-            forceMajeure: document.getElementById('forceMajeureConditions').value,
-            confidentiality: document.getElementById('confidentialityTerms').value
-          }
-        };
+      document
+        .getElementById("responsiveForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
 
-        // Create prompt template
-        let templateString = `لطفاً یک قرارداد بین ${formData.firstParty.name} (به نمایندگی ${formData.firstParty.representative}) و ${formData.secondParty.name} (به نمایندگی ${formData.secondParty.representative}) با موضوع ${formData.contract.description} به مبلغ ${formData.contract.amount} ${formData.contract.currency} تنظیم کنید. مشخصات فنی و کیفی: ${formData.contract.technicalSpecs}. محدوده خدمات: ${formData.contract.serviceScope}. نحوه پرداخت: ${formData.contract.paymentMethod}. مدت قرارداد از تاریخ ${formData.contract.startDate} تا ${formData.contract.endDate}. شرایط تمدید: ${formData.contract.extensionTerms}. تعهدات طرف اول: ${formData.contract.firstPartyObligations}. تعهدات طرف دوم: ${formData.contract.secondPartyObligations}. استانداردهای کیفیت: ${formData.contract.qualityStandards}. شرایط فسخ: ${formData.contract.terminationConditions}. جریمه فسخ پیش از موعد: ${formData.contract.earlyTerminationPenalties}. نوع ضمانت: ${formData.contract.guaranteeType} به مبلغ ${formData.contract.guaranteeAmount}. نحوه حل اختلاف: ${formData.contract.disputeResolution}. شرایط فورس ماژور: ${formData.contract.forceMajeure}. تعهدات محرمانگی: ${formData.contract.confidentiality}.`;
+          // Collect form data
+          const formData = {
+            firstParty: {
+              name: document.getElementById("firstPartyName").value,
+              id: document.getElementById("firstPartyId").value,
+              address: document.getElementById("firstPartyAddress").value,
+              representative: document.getElementById(
+                "firstPartyRepresentative"
+              ).value,
+            },
+            secondParty: {
+              name: document.getElementById("secondPartyName").value,
+              id: document.getElementById("secondPartyId").value,
+              address: document.getElementById("secondPartyAddress").value,
+              representative: document.getElementById(
+                "secondPartyRepresentative"
+              ).value,
+            },
+            company: {
+              nationality: document.getElementById("nationality").value,
+              registrationCountry: document.getElementById(
+                "registrationCountry"
+              ).value,
+            },
+            contract: {
+              description: document.getElementById("contractDescription").value,
+              technicalSpecs: document.getElementById("technicalSpecs").value,
+              serviceScope: document.getElementById("serviceScope").value,
+              amount: document.getElementById("totalAmount").value,
+              currency: document.getElementById("currency").value,
+              paymentMethod: document.getElementById("paymentMethod").value,
+              startDate: document.getElementById("startDate").value,
+              endDate: document.getElementById("endDate").value,
+              extensionTerms: document.getElementById("extensionTerms").value,
+              firstPartyObligations: document.getElementById(
+                "firstPartyObligations"
+              ).value,
+              secondPartyObligations: document.getElementById(
+                "secondPartyObligations"
+              ).value,
+              qualityStandards:
+                document.getElementById("qualityStandards").value,
+              terminationConditions: document.getElementById(
+                "terminationConditions"
+              ).value,
+              earlyTerminationPenalties: document.getElementById(
+                "earlyTerminationPenalties"
+              ).value,
+              guaranteeType: document.getElementById("guaranteeType").value,
+              guaranteeAmount: document.getElementById("guaranteeAmount").value,
+              disputeResolution: document.getElementById(
+                "disputeResolutionMethod"
+              ).value,
+              forceMajeure: document.getElementById("forceMajeureConditions")
+                .value,
+              confidentiality: document.getElementById("confidentialityTerms")
+                .value,
+            },
+          };
 
-        // Send the template string to your API or process it as needed
-        console.log(templateString);
-        
-        // Show success message
-        alert('اطلاعات قرارداد با موفقیت ثبت شد.');
-      });
+          // Create prompt template
+          let templateString = `لطفاً یک قرارداد بین ${formData.firstParty.name} (به نمایندگی ${formData.firstParty.representative}) و ${formData.secondParty.name} (به نمایندگی ${formData.secondParty.representative}) با موضوع ${formData.contract.description} به مبلغ ${formData.contract.amount} ${formData.contract.currency} تنظیم کنید. مشخصات فنی و کیفی: ${formData.contract.technicalSpecs}. محدوده خدمات: ${formData.contract.serviceScope}. نحوه پرداخت: ${formData.contract.paymentMethod}. مدت قرارداد از تاریخ ${formData.contract.startDate} تا ${formData.contract.endDate}. شرایط تمدید: ${formData.contract.extensionTerms}. تعهدات طرف اول: ${formData.contract.firstPartyObligations}. تعهدات طرف دوم: ${formData.contract.secondPartyObligations}. استانداردهای کیفیت: ${formData.contract.qualityStandards}. شرایط فسخ: ${formData.contract.terminationConditions}. جریمه فسخ پیش از موعد: ${formData.contract.earlyTerminationPenalties}. نوع ضمانت: ${formData.contract.guaranteeType} به مبلغ ${formData.contract.guaranteeAmount}. نحوه حل اختلاف: ${formData.contract.disputeResolution}. شرایط فورس ماژور: ${formData.contract.forceMajeure}. تعهدات محرمانگی: ${formData.contract.confidentiality}.`;
+
+          localStorage.setItem("userInitialPrompt", templateString); // Save the name to localStorage
+
+          window.location.href = `../index.html`;
+        });
     </script>
   </body>
 </html>

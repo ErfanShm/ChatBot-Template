@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>فرم ورود اطلاعات اولیه</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="StyleSheet.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>فرم ورود اطلاعات اولیه</h2>
+      <form id="responsiveForm">
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="whois">چی صدات کنم ؟!</label>
+              <input type="text" class="form-control" id="whois" />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="grade">در کدام رشته تحصیل میکنی یا کردی ؟!</label>
+              <input type="text" class="form-control" id="grade" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="goal"
+                >بزرگترین هدف شغلی یا حرفه فعلی شما چیست ؟!</label
+              >
+              <input type="text" class="form-control" id="goal" />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="yourTargetToContribute"
+                >چه چیزی بیشترین انگیزه را به شما میدهد تا در یک دوره آموزشی
+                شرکت کنید</label
+              >
+              <small>ارتقا شغلی ، علاقه شخصی ، و..</small>
+              <input
+                type="text"
+                class="form-control"
+                id="yourTargetToContribute"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="Subject"
+                >چه موضوعاتی بیشترین علاقه را در شما ایجاد میکنند</label
+              >
+              <small>فناوری ، هنر ، مدیریت و...</small>
+              <input type="text" class="form-control" id="Subject" />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="onlineclass"
+                >آیا دوره های حضوری آنلاین را ترجیح میدهید یا حضوری !؟</label
+              >
+              <select class="form-control" name="onlineclass">
+                <option value="انلاین">آنلاین</option>
+                <option value="افلاین">آفلاین</option>
+                <option value="حضوری">حضوری</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="resource"
+                >آیا منابع یا بودجه کافی برای شرکت در دوره های آموزشی را دارید ؟
+                یا به دنبال گزینه های مقرون به صرفه یا رایگان هستید؟
+              </label>
+              <input class="form-control" id="resource" />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="lifeStyle">چه سبک آموزشی مد نظرتون هست</label>
+              <select class="form-control" id="lifeStyle">
+                <option value="سریع و فشرده">سریع و فشرده</option>
+                <option value="مستعمر و طولانی مدت">مستعمر و طولانی مدت</option>
+                <option value="فرقی نمیکند">فرقی نمیکند</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+                <label for="suggestionCourse">
+                    در چه زمینه آموزشی احساس کمبود میکنید
+                </label>
+              <input class="form-control" id="suggestionCourse"/>
+            </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+                <label for="yourskill">
+در حال حاضر چه مهارت هایی دارید که فکر میکنید در کار یا زندگی شخصیتان مفید است ؟                </label>
+              <input class="form-control" id="yourskill"/>
+            </div>
+          </div>
+        </div>
+     
+        <button type="submit" class="btn btn-primary">ارسال سوالات</button>
+      </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+      document
+        .getElementById("responsiveForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const whois = document.getElementById("whois").value;
+          const grade = document.getElementById("grade").value;
+          const goal = document.getElementById("goal").value;
+          const yourTargetToContribute = document.getElementById("yourTargetToContribute").value;
+          const Subject = document.getElementById("Subject").value;
+          const onlineclass = document.getElementById('onlineclass').value; // Since it doesn't have an ID
+          const resource = document.getElementById("resource").value;
+          const lifeStyle = document.getElementById("EstresType").value;
+          const suggestionCourse = document.getElementById("dragStatus").value;
+
+
+          // Template string with placeholders
+          let descriptionString = `تو ${whois} دانشجوی رشته ${grade} با موقعیت و هدف شغلی ${goal} با انگیزه ${yourTargetToContribute} با علاقه در زمینه های ${Subject} هستم که توانایی شرکت در دوره های آموزشی ${onlineclass} و سبک آموزشی ${resource} که دوره های ${lifeStyle} را دارم. بنده در حوزه های ${suggestionCourse} احساس ضعف میکنم و در زمینه های ${skill} مهارت دارم. 
+          پیشنهادات برای من چیه؟`;
+          
+          // Replace placeholders with actual values
+          templateString = templateString
+            .replace("{whois}", whois)
+            .replace("{grade}", grade)
+            .replace("{goal}", goal)
+            .replace("{yourTargetToContribute}", yourTargetToContribute)
+            .replace("{Subject}", Subject)
+            .replace("{onlineclass}", onlineclass)
+            .replace("{resource}", resource)
+            .replace("{lifeStyle}", lifeStyle)
+            .replace("{suggestionCourse}", suggestionCourse);
+
+          localStorage.setItem("userInitialPrompt", templateString); // Save the name to localStorage
+
+          window.location.href = `../index.html`;
+        });
+    </script>
+  </body>
+</html>
