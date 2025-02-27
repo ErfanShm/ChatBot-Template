@@ -139,31 +139,16 @@
           const goal = document.getElementById("goal").value;
           const yourTargetToContribute = document.getElementById("yourTargetToContribute").value;
           const Subject = document.getElementById("Subject").value;
-          const onlineclass = document.getElementById('onlineclass').value; // Since it doesn't have an ID
+          const onlineclass = document.querySelector('[name="onlineclass"]').value;
           const resource = document.getElementById("resource").value;
-          const lifeStyle = document.getElementById("EstresType").value;
-          const suggestionCourse = document.getElementById("dragStatus").value;
-
-
-          // Template string with placeholders
-          let descriptionString = `تو ${whois} دانشجوی رشته ${grade} با موقعیت و هدف شغلی ${goal} با انگیزه ${yourTargetToContribute} با علاقه در زمینه های ${Subject} هستم که توانایی شرکت در دوره های آموزشی ${onlineclass} و سبک آموزشی ${resource} که دوره های ${lifeStyle} را دارم. بنده در حوزه های ${suggestionCourse} احساس ضعف میکنم و در زمینه های ${skill} مهارت دارم. 
-          پیشنهادات برای من چیه؟`;
+          const lifeStyle = document.getElementById("lifeStyle").value;
+          const suggestionCourse = document.getElementById("suggestionCourse").value;
+          const yourskill = document.getElementById("yourskill").value;
           
-          // Replace placeholders with actual values
-          templateString = templateString
-            .replace("{whois}", whois)
-            .replace("{grade}", grade)
-            .replace("{goal}", goal)
-            .replace("{yourTargetToContribute}", yourTargetToContribute)
-            .replace("{Subject}", Subject)
-            .replace("{onlineclass}", onlineclass)
-            .replace("{resource}", resource)
-            .replace("{lifeStyle}", lifeStyle)
-            .replace("{suggestionCourse}", suggestionCourse);
-
-          localStorage.setItem("userInitialPrompt", templateString); // Save the name to localStorage
-
-          window.location.href = `../index.html`;
+          // Create the template string with proper variable references
+          const templateString = `تو ${whois} دانشجوی رشته ${grade} با موقعیت و هدف شغلی ${goal} با انگیزه ${yourTargetToContribute} با علاقه در زمینه های ${Subject} هستم که توانایی شرکت در دوره های آموزشی ${onlineclass} و سبک آموزشی ${resource} که دوره های ${lifeStyle} را دارم. بنده در حوزه های ${suggestionCourse} احساس ضعف میکنم و در زمینه های ${yourskill} مهارت دارم. پیشنهادات برای من چیه؟`;
+          localStorage.setItem("userInitialPrompt", templateString);
+          window.location.href = "../index.html";
         });
     </script>
   </body>

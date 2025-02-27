@@ -1,181 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>فرم ورود اطلاعات اولیه</title>
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
-      rel="stylesheet"
-      type="text/css"
-    />
+    <title>فرم برنامه ریزی شغلی</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="StyleSheet.css" />
   </head>
   <body>
     <div class="form-container">
-      <h2>فرم ورود اطلاعات اولیه</h2>
+      <h2>فرم برنامه ریزی شغلی</h2>
       <form id="responsiveForm">
-        <div class="row">
-          <div class="col-6">
+        <!-- بخش 1: چشم انداز -->
+        <h4 class="section-title mb-3">بخش ۱: چشم انداز</h4>
+        <div class="row mb-3">
+          <div class="col-12">
             <div class="form-group">
-              <label for="Name">نام</label>
-              <input type="text" class="form-control" id="Name" />
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="form-group">
-              <label for="Name">نام خانوادگی</label>
-              <input type="text" class="form-control" id="Family" />
+              <label for="vision">چشم انداز شغلی ۳ سال آینده شما چیست؟</label>
+              <input type="text" class="form-control" id="vision" placeholder="مثال: در ۳ سال آینده، رییس تیم توسعه یک شرکت فناوری باشم" required />
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-6">
+        <div class="row mb-3">
+          <div class="col-12">
             <div class="form-group">
-              <label for="Sex">جنسیت</label>
-              <select id="Sex">
-                <option value="مرد">مرد</option>
-                <option value="زن">زن</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="form-group">
-              <label for="Name">وضعیت تاهل</label>
-              <select class="form-control" id="MaridStatus">
-                <option value="مجرد">مجرد</option>
-                <option value="متاهل">متاهل</option>
-              </select>
+              <label for="requiredSkills">چه مهارت‌هایی در این چشم انداز لازم دارید؟</label>
+              <input type="text" class="form-control" id="requiredSkills" placeholder="مثال: Python، تحلیل داده‌های بزرگ، مدیریت تیم‌ها" required />
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-6">
+        <div class="row mb-3">
+          <div class="col-12">
             <div class="form-group">
-              <label for="grade">میزان تحصیلات</label>
-              <select class="form-control" id="grade">
-                <option value="دیپلم">دیپلم</option>
-                <option value="لیسانس">لیسانس</option>
-                <option value="فوق لیسانس">فوق لیسانس</option>
-                <option value="دکتری">دکتری</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="form-group">
-              <label for="working">اشتغال</label>
-              <input class="form-control" name="working" />
+              <label for="requiredResources">چه منابع یا ابزارهایی برای دسترسی به این چشم انداز نیاز دارید؟</label>
+              <input type="text" class="form-control" id="requiredResources" placeholder="مثال: دوره‌های پیشرفته AI، دسترسی به ابزارهای پیشرفته" required />
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-6">
+        <div class="row mb-3">
+          <div class="col-12">
             <div class="form-group">
-              <label for="IllnesHistorical">سابقه بیماری</label>
-              <select class="form-control" id="IllnesHistorical">
-                <option value="دیابت">دیابت</option>
-                <option value="فشارخون">فشارخون</option>
-                <option value="سابقه بیماریهای جسمانی">
-                  سابقه بیماریهای جسمانی
-                </option>
-              </select>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="form-group">
-              <label for="EstresType">نوع استرس های زندگی</label>
-              <select class="form-control" id="EstresType">
-                <option value="فقدان یک شخص مهم">فقدان یک شخص مهم</option>
-                <option value="بیماری جسمانی و مزمن">
-                  بیماری جسمانی و مزمن
-                </option>
-                <option value="مشکلات اقتصادی">مشکلات اقتصادی</option>
-                <option value="مشکلات اقتصادی">اختلاف با همسر</option>
-              </select>
+              <label for="targetDate">تاریخ منحل شدن چشم انداز شما چیست؟</label>
+              <input type="text" class="form-control" id="targetDate" placeholder="مثال: تا اردیبهشت ۱۴۰۵" required />
             </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row mb-3">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="successCriteria">چه معیارهایی برای موفقیت در این چشم انداز تعریف کرده‌اید؟</label>
+              <input type="text" class="form-control" id="successCriteria" placeholder="مثال: ارائه ۳ پروژه موفق در حوزه AI، دریافت مجوز PMI" required />
+            </div>
+          </div>
+        </div>
+
+        <!-- بخش 2: وضعیت فعلی -->
+        <h4 class="section-title mb-3">بخش ۲: شناخت وضعیت فعلی</h4>
+        <div class="row mb-3">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="currentEducation">وضعیت تحصیلی فعلی شما چیست؟</label>
+              <input type="text" class="form-control" id="currentEducation" placeholder="مثال: دانشجوی سال سوم مهندسی کامپیوتر" required />
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="experience">تجربه کاری یا پروژه‌های کلیدی تاکنون؟</label>
+              <input type="text" class="form-control" id="experience" placeholder="مثال: ۲ ماه تمرین در شرکت X، ارائه پروژه پردازش تصویر" required />
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
           <div class="col-6">
             <div class="form-group">
-              <label for="dragStatus">سابقه مصرف دارو</label>
-              <select class="form-control" id="dragStatus">
-                <option value="دارد">دارد</option>
-                <option value="ندارد">ندارد</option>
-              </select>
+              <label for="softSkills">مهارت‌های نرم</label>
+              <input type="text" class="form-control" id="softSkills" placeholder="مثال: مدیریت زمان، همکاری تیمی" required />
             </div>
           </div>
           <div class="col-6">
             <div class="form-group">
-              <label for="sleepType">وضعیت خواب</label>
-              <select class="form-control" id="sleepType">
-                <option value="بد خوابی">بد خوابی</option>
-                <option value="بی خوابی">بی خوابی</option>
-                <option value="بدون مشکل">بدون مشکل</option>
-              </select>
+              <label for="technicalSkills">مهارت‌های فنی</label>
+              <input type="text" class="form-control" id="technicalSkills" placeholder="مثال: برنامه‌نویسی، تحلیل داده‌ها" required />
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="form-group">
-            <label for="disorderDoctor">اختلالات همراه روانپزشکی</label>
-            <select class="form-control" id="disorderDoctor">
-              <option value="افسردگی">افسردگی</option>
-              <option value="اضطراب">اظطراب</option>
-              <option value="اعتیاد">اعتیاد</option>
-            </select>
+        <div class="row mb-3">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="currentResources">چه منابعی در دسترس خود دارید؟</label>
+              <input type="text" class="form-control" id="currentResources" placeholder="مثال: دسترسی به کتابخانه دانشگاه، اشتراک LinkedIn Learning" required />
+            </div>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary">ارسال سوالات</button>
+        <div class="row mb-3">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="currentChallenges">چالش‌های کلیدی فعلی شما چیست؟</label>
+              <input type="text" class="form-control" id="currentChallenges" placeholder="مثال: محدودیت زمانی، نیاز به دسترسی به ابزارهای پیشرفته" required />
+            </div>
+          </div>
+        </div>
+
+        <!-- بخش 3: تحلیل شکاف -->
+        <h4 class="section-title mb-3">بخش ۳: تعیین فاصله و راهبردهای پویا</h4>
+        <div class="row mb-3">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="progressSteps">چه گام‌هایی تاکنون برای نزدیک شدن به چشم انداز خود انجام داده‌اید؟</label>
+              <input type="text" class="form-control" id="progressSteps" placeholder="مثال: ۳ ماه گذشته را به یادگیری Python اختصاص دادم" required />
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="missingSkills">چه مهارت‌هایی را نیاز دارید ولی درکنون ندارید؟</label>
+              <input type="text" class="form-control" id="missingSkills" placeholder="مثال: یادگیری دیباگینگ پیشرفته، شناسایی با ابزارهای DevOps" required />
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="opportunities">چه فرصت‌هایی در محیط فعلی خود برای پیشرفت دارید؟</label>
+              <input type="text" class="form-control" id="opportunities" placeholder="مثال: همکاری با دانشگاه برای پروژه‌های واقعی، تیم پروژه دیپلمایم" required />
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="futureChallenges">چه چالش‌هایی ممکن است در ۳ سال آینده پیش بیاید؟</label>
+              <input type="text" class="form-control" id="futureChallenges" placeholder="مثال: تغییر اولویت‌های صنعت فناوری، پایین آمدن سرمایه" required />
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="learningPreference">چه ترجیحی برای یادگیری مهارت‌های جدید دارید؟</label>
+              <input type="text" class="form-control" id="learningPreference" placeholder="مثال: دوره‌های آنلاین سریع، تمرین در شرکت‌های فناوری" required />
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">ایجاد برنامه توسعه شغلی</button>
       </form>
     </div>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    
     <!-- Custom JS -->
     <script>
-      document
-        .getElementById("responsiveForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          const name = document.getElementById("Name").value;
-          const family = document.getElementById("Family").value;
-          const sex = document.getElementById("Sex").value;
-          const maritalStatus = document.getElementById("MaridStatus").value;
-          const education = document.getElementById("grade").value;
-          const working = document.querySelector('[name="working"]').value; // Since it doesn't have an ID
-          const illness = document.getElementById("IllnesHistorical").value;
-          const stress = document.getElementById("EstresType").value;
-          const drugStatus = document.getElementById("dragStatus").value;
-          const sleepStatus = document.getElementById("sleepType").value;
-          const disorderDoctor =
-            document.getElementById("disorderDoctor").value;
+      document.getElementById('responsiveForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Collect form data
+        const formData = {
+          vision: document.getElementById('vision').value,
+          requiredSkills: document.getElementById('requiredSkills').value,
+          requiredResources: document.getElementById('requiredResources').value,
+          targetDate: document.getElementById('targetDate').value,
+          successCriteria: document.getElementById('successCriteria').value,
+          currentEducation: document.getElementById('currentEducation').value,
+          experience: document.getElementById('experience').value,
+          softSkills: document.getElementById('softSkills').value,
+          technicalSkills: document.getElementById('technicalSkills').value,
+          currentResources: document.getElementById('currentResources').value,
+          currentChallenges: document.getElementById('currentChallenges').value,
+          progressSteps: document.getElementById('progressSteps').value,
+          missingSkills: document.getElementById('missingSkills').value,
+          opportunities: document.getElementById('opportunities').value,
+          futureChallenges: document.getElementById('futureChallenges').value,
+          learningPreference: document.getElementById('learningPreference').value
+        };
 
-          // Template string with placeholders
-          let templateString = `در خصوص یک بیماری که دارای شکایت مشکل حافظه دارد با جنسیت {sex} و وضعیت تاهل {maritalStatus} دارای مدرک {education} و دارای اشتغال {working} و همچنین دارای بیماری {illness} و دارای استرس های از نوع {stress} و سابقه مصرف دارو {drug} و وضعیت خواب هم به شکل {sleep} می باشد و دارای اختلالات همراه روانپزشکی {disorder} می باشد چه توصیه داری`;
+        // Create template string
+        let templateString = `چشم انداز من در 3 سال آینده ${formData.vision} است و مهارت های ${formData.requiredSkills} را دارم همچنین منابع ${formData.requiredResources} برای این چشم انداز نیاز دارم. زمان رسیدن به این چشم انداز ${formData.targetDate} است و با معیار های ${formData.successCriteria} موفقیت خودم را ارزیابی میکنم.
 
-          // Replace placeholders with actual values
-          templateString = templateString
-            .replace("{sex}", sex)
-            .replace("{maritalStatus}", maritalStatus)
-            .replace("{education}", education)
-            .replace("{working}", working)
-            .replace("{illness}", illness)
-            .replace("{stress}", stress)
-            .replace("{drug}", drugStatus)
-            .replace("{sleep}", sleepStatus)
-            .replace("{disorder}", disorderDoctor);
+وضعیت تحصیلی من ${formData.currentEducation} است و من تا کنون تجربه کاری ${formData.experience} را دارم. مهارت نرم و فنی من ${formData.softSkills} و ${formData.technicalSkills} است و منابع در دسترس من ${formData.currentResources} میباشد و با چالش های فعلی من ${formData.currentChallenges} است.
 
-          localStorage.setItem("userInitialPrompt", templateString); // Save the name to localStorage
+تا کنون گام های ${formData.progressSteps} را برای چشم انداز پیموده ام و مهارت های ${formData.missingSkills} را نیاز دارم اما در حال حاضر نیاموخته ام. در حال حاضر در محیط فعلی فرصت های ${formData.opportunities} را برای پیشرفت دارم و در سه سال آینده با چالش های ${formData.futureChallenges} مواجه خواهم شد و ترجیح میدهم مهارت های ${formData.learningPreference} را یاد بگیرم.
+با توجه به اطلاعات ارائه شده برنامه شغلی من را در بلند مدت ( 3 ساله) میان مدت ( 1 ساله) و کوتاه مدت ( 3 تا 6 ماه) تحلیل کن و برای رسیدن به آن یک برنامه عملیاتی طراحی کن.`;
 
-          window.location.href = `../index.html`;
-        });
+        // Save to localStorage and redirect
+        localStorage.setItem('userInitialPrompt', templateString);
+        window.location.href = '../index.html';
+      });
     </script>
   </body>
 </html>

@@ -175,7 +175,7 @@ else
                   width="60"
               />
               <div class="pt-1">
-                  <p class="fw-bold mb-0">${AIChatBotName}</p>
+                  <p dir='rtl' class="fw-bold mb-0">${AIChatBotName}</p>
                   <p class="small text-muted">${response}</p>
               </div>
           </div>
@@ -209,7 +209,7 @@ async function SendInitialMessage(userMessage,selectedModel) {
               width="60"
           />
           <div class="pt-1">
-              <p class="fw-bold mb-0">${UserName}</p>
+              <p dir='rtl' class="fw-bold mb-0 text-right">${UserName}</p>
               <p class="small text-muted">${userMessage}</p>
           </div>
       </div>
@@ -246,7 +246,7 @@ else
                   width="60"
               />
               <div class="pt-1">
-                  <p class="fw-bold mb-0">${AIChatBotName}</p>
+                  <p dir='rtl' class="fw-bold mb-0">${AIChatBotName}</p>
                   <p class="small text-muted">${response}</p>
               </div>
           </div>

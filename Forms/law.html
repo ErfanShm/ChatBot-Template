@@ -300,70 +300,39 @@
 
           // Collect form data
           const formData = {
-            firstParty: {
-              name: document.getElementById("firstPartyName").value,
-              id: document.getElementById("firstPartyId").value,
-              address: document.getElementById("firstPartyAddress").value,
-              representative: document.getElementById(
-                "firstPartyRepresentative"
-              ).value,
-            },
-            secondParty: {
-              name: document.getElementById("secondPartyName").value,
-              id: document.getElementById("secondPartyId").value,
-              address: document.getElementById("secondPartyAddress").value,
-              representative: document.getElementById(
-                "secondPartyRepresentative"
-              ).value,
-            },
-            company: {
-              nationality: document.getElementById("nationality").value,
-              registrationCountry: document.getElementById(
-                "registrationCountry"
-              ).value,
-            },
-            contract: {
-              description: document.getElementById("contractDescription").value,
-              technicalSpecs: document.getElementById("technicalSpecs").value,
-              serviceScope: document.getElementById("serviceScope").value,
-              amount: document.getElementById("totalAmount").value,
-              currency: document.getElementById("currency").value,
-              paymentMethod: document.getElementById("paymentMethod").value,
-              startDate: document.getElementById("startDate").value,
-              endDate: document.getElementById("endDate").value,
-              extensionTerms: document.getElementById("extensionTerms").value,
-              firstPartyObligations: document.getElementById(
-                "firstPartyObligations"
-              ).value,
-              secondPartyObligations: document.getElementById(
-                "secondPartyObligations"
-              ).value,
-              qualityStandards:
-                document.getElementById("qualityStandards").value,
-              terminationConditions: document.getElementById(
-                "terminationConditions"
-              ).value,
-              earlyTerminationPenalties: document.getElementById(
-                "earlyTerminationPenalties"
-              ).value,
-              guaranteeType: document.getElementById("guaranteeType").value,
-              guaranteeAmount: document.getElementById("guaranteeAmount").value,
-              disputeResolution: document.getElementById(
-                "disputeResolutionMethod"
-              ).value,
-              forceMajeure: document.getElementById("forceMajeureConditions")
-                .value,
-              confidentiality: document.getElementById("confidentialityTerms")
-                .value,
-            },
+            firstPartyName: document.getElementById("firstPartyName").value,
+            firstPartyId: document.getElementById("firstPartyId").value,
+            firstPartyAddress: document.getElementById("firstPartyAddress").value,
+            secondPartyName: document.getElementById("secondPartyName").value,
+            secondPartyId: document.getElementById("secondPartyId").value,
+            secondPartyAddress: document.getElementById("secondPartyAddress").value,
+            contractDescription: document.getElementById("contractDescription").value,
+            technicalSpecs: document.getElementById("technicalSpecs").value,
+            serviceScope: document.getElementById("serviceScope").value,
+            totalAmount: document.getElementById("totalAmount").value,
+            currency: document.getElementById("currency").value,
+            paymentMethod: document.getElementById("paymentMethod").value,
+            startDate: document.getElementById("startDate").value,
+            endDate: document.getElementById("endDate").value,
+            extensionTerms: document.getElementById("extensionTerms").value,
+            firstPartyObligations: document.getElementById("firstPartyObligations").value,
+            secondPartyObligations: document.getElementById("secondPartyObligations").value,
+            qualityStandards: document.getElementById("qualityStandards").value,
+            terminationConditions: document.getElementById("terminationConditions").value,
+            earlyTerminationPenalties: document.getElementById("earlyTerminationPenalties").value,
+            guaranteeType: document.getElementById("guaranteeType").value,
+            guaranteeAmount: document.getElementById("guaranteeAmount").value,
+            disputeResolutionMethod: document.getElementById("disputeResolutionMethod").value,
+            forceMajeureConditions: document.getElementById("forceMajeureConditions").value,
+            confidentialityTerms: document.getElementById("confidentialityTerms").value
           };
 
           // Create prompt template
-          let templateString = `لطفاً یک قرارداد بین ${formData.firstParty.name} (به نمایندگی ${formData.firstParty.representative}) و ${formData.secondParty.name} (به نمایندگی ${formData.secondParty.representative}) با موضوع ${formData.contract.description} به مبلغ ${formData.contract.amount} ${formData.contract.currency} تنظیم کنید. مشخصات فنی و کیفی: ${formData.contract.technicalSpecs}. محدوده خدمات: ${formData.contract.serviceScope}. نحوه پرداخت: ${formData.contract.paymentMethod}. مدت قرارداد از تاریخ ${formData.contract.startDate} تا ${formData.contract.endDate}. شرایط تمدید: ${formData.contract.extensionTerms}. تعهدات طرف اول: ${formData.contract.firstPartyObligations}. تعهدات طرف دوم: ${formData.contract.secondPartyObligations}. استانداردهای کیفیت: ${formData.contract.qualityStandards}. شرایط فسخ: ${formData.contract.terminationConditions}. جریمه فسخ پیش از موعد: ${formData.contract.earlyTerminationPenalties}. نوع ضمانت: ${formData.contract.guaranteeType} به مبلغ ${formData.contract.guaranteeAmount}. نحوه حل اختلاف: ${formData.contract.disputeResolution}. شرایط فورس ماژور: ${formData.contract.forceMajeure}. تعهدات محرمانگی: ${formData.contract.confidentiality}.`;
+          let templateString = `لطفاً یک قرارداد بین ${formData.firstPartyName} و ${formData.secondPartyName} با موضوع ${formData.contractDescription} به مبلغ ${formData.totalAmount} ${formData.currency} تنظیم کنید. مشخصات فنی و کیفی: ${formData.technicalSpecs}. محدوده خدمات: ${formData.serviceScope}. نحوه پرداخت: ${formData.paymentMethod}. مدت قرارداد از تاریخ ${formData.startDate} تا ${formData.endDate}. شرایط تمدید: ${formData.extensionTerms}. تعهدات طرف اول: ${formData.firstPartyObligations}. تعهدات طرف دوم: ${formData.secondPartyObligations}. استانداردهای کیفیت: ${formData.qualityStandards}. شرایط فسخ: ${formData.terminationConditions}. جریمه فسخ پیش از موعد: ${formData.earlyTerminationPenalties}. نوع ضمانت: ${formData.guaranteeType} به مبلغ ${formData.guaranteeAmount}. نحوه حل اختلاف: ${formData.disputeResolutionMethod}. شرایط فورس ماژور: ${formData.forceMajeureConditions}. تعهدات محرمانگی: ${formData.confidentialityTerms}.`;
 
-          localStorage.setItem("userInitialPrompt", templateString); // Save the name to localStorage
-
-          window.location.href = `../index.html`;
+          // Save to localStorage and redirect
+          localStorage.setItem("userInitialPrompt", templateString);
+          window.location.href = "../Index.html";
         });
     </script>
   </body>

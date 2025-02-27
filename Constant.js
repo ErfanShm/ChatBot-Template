@@ -25,7 +25,7 @@
       export const baseUrl = "https://api.avalai.ir/v1";
       export const apiUrl = "https://api.avalai.ir/v1/images/generations";
       export const apiKey = "aa-crDGvdxPbJsFNth9WgEWdfAKSVFc6mX38bJZJkdzVSunsZ2A";
-      export const Question_Form="Psychology.html"
+      export const Question_Form="aminoltojjar.html"
       export const messages = [
             { role: "system", content: "تو یک هوش مصنوعی هستی که قرار به کاربران کمک کنی" }
         ];

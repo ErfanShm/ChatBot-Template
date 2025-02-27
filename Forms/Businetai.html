@@ -183,7 +183,7 @@
           const targetOfAdvice = document.getElementById("targetofadv").value;
 
           // Template string with placeholders
-          let templateString = `جنابعالی ${name} ${family} هستید، با عنوان شغلی ${jobPosition} که در حوزه ${businessType} فعالیت دارد. سازمان شما یک مجموعه ${orgType} است که از سال ${startDate} فعالیت می‌کند و دارای ${humanCount} کارمند است. دفتر مرکزی شما به صورت ${businessLocation} فعالیت دارد و میانگین درآمد ماهانه شما در بازه ${revenue} است.
+          let templateString = `جنابعالی ${name} ${family} هستید، با عنوان شغلی ${jobPosition} که در حوزه ${businessType} فعالیت دارد. سازمان شما یک مجموعه ${orgType} است که از سال ${startDate} فعالیت می‌کند و دارای ${humanCount} کارمند است. دفتر مرکزی شما در ${businessLocation} فعالیت دارد و میانگین درآمد ماهانه شما در بازه ${revenue} است.
           شما به دنبال دریافت مشاوره در حوزه‌ ${advisorType} هستید. در حال حاضر، وضعیت فعلی کسب و کار شما ${describeBusiness} است همچنین کسب‌وکار شما با چالش‌هایی مانند ${businessChallenge} مواجه است. مهم‌ترین ابهام شما در عارضه‌یابی مربوط به ${approachOfProblem} است و هدف اصلی شما از دریافت مشاوره، ${targetOfAdvice} است.`;
 
           localStorage.setItem("userInitialPrompt", templateString); // Save the name to localStorage
